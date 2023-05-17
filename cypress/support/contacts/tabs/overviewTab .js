@@ -1,11 +1,14 @@
-import EditIndividualModal from "../modals/editIndividual"
+import { ConactPageEditIndividualModal } from "../modals/editIndividual"
 
-export default class ContactPageOverviewTab {
-
-    EditIndividual = new EditIndividualModal()
+export class ContactPageOverviewTab {
+    constructor() {
+        this.EditIndividual = new ConactPageEditIndividualModal()
+    }
 
     tabMethod() {
-        alert('tabmethod')    
+        alert('tabmethod')
+    }
+    cypressTabMethod() {
+        cy.log('Tab level')
     }
 }
-
