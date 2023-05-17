@@ -1,11 +1,17 @@
-import  ContactPage  from '../../support/contacts/contact'
+import { ContactPg } from '../../support/contacts/contact'
 
-describe('describe...', ()=> {
-    it('it...', ()=> {
-        let ContactPg = new ContactPage()
+describe('describe...', () => {
+    it('it...', () => {
 
         ContactPg.contactpagemethod()
-        ContactPg.OverviewTab.tabmethod();
-        ContactPg.OverviewTab.EditIndividualModal.edit();
+        ContactPg.OverviewTab.tabMethod();
+        ContactPg.OverviewTab.EditIndividual.editIndividual();
+    })
+
+    it.only('Slava test', () => {
+        ContactPg.cypressPageMethod()
+        ContactPg.OverviewTab.cypressTabMethod()
+        ContactPg.OverviewTab.EditIndividual.cypressModalMethod()
+
     })
 })
